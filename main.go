@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("------------- LISTS -------------")
+	fmt.Println("------------- LINKED LIST -------------")
 	linear_list := lists.LinkedList()
 	linear_list.Unshift(1)
 	linear_list.Unshift(2)
@@ -28,4 +28,14 @@ func main() {
 	bst.Print()
 	bst = bst.Remove(2)
 	bst.Print()
+
+	fmt.Println("------------- DESCRIPTOR LIST -------------")
+	descriptor_list := lists.DescriptorList[int]()
+	descriptor_list.Push(1)
+	descriptor_list.Push(2)
+	descriptor_list.Unshift(3)
+	fmt.Println(descriptor_list.NumberOfElements())
+	descriptor_list.Print()
+	descriptor_list.Remove(2)
+	descriptor_list.Print()
 }
