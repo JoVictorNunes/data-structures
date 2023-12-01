@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/JoVictorNunes/data-structures/lists"
+	"github.com/JoVictorNunes/data-structures/searching"
 	"github.com/JoVictorNunes/data-structures/trees"
 )
 
@@ -38,4 +39,9 @@ func main() {
 	descriptor_list.Print()
 	descriptor_list.Remove(2)
 	descriptor_list.Print()
+
+	fmt.Println("------------- BINARY SEARCH -------------")
+	list := []float32{1, 2, 3, 4, 5, 6, 7}
+	elem, err := searching.BinarySearch[float32](9, list)
+	fmt.Println(elem, err)
 }
